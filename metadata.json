@@ -1,0 +1,6 @@
+{
+  "name": "DEMON SENSI_X",
+  "description": "Premium Free Fire sensitivity tuner, horror jumpscare intro, FPS & hardware monitor, and complete native Android Kotlin project generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

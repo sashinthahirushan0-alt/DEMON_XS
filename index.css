@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-gaming: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-tech: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-gaming {
+  font-family: var(--font-gaming);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Custom Gaming Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a201b;
+  border-radius: 3px;
+  border: 1px solid #ff550033;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
+
+/* Aggressive Demon Glows */
+.demon-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(255, 85, 0, 0.35);
+}
+
+.demon-glow {
+  box-shadow: 0 0 25px -4px rgba(255, 85, 0, 0.45);
+}
+
+.demon-glow-lg {
+  box-shadow: 0 0 45px 0px rgba(255, 60, 0, 0.55);
+}
+
+.demon-text-glow {
+  text-shadow: 0 0 12px rgba(255, 85, 0, 0.75), 0 0 24px rgba(255, 34, 0, 0.5);
+}
+
+.demon-border-glow {
+  border-color: rgba(255, 85, 0, 0.4);
+  box-shadow: inset 0 0 15px rgba(255, 85, 0, 0.15), 0 0 20px rgba(255, 85, 0, 0.25);
+}
+
+/* Screen shake keyframes for horror jumpscare */
+@keyframes demonShake {
+  0% { transform: translate(0, 0) scale(1); filter: contrast(120%) brightness(100%); }
+  10% { transform: translate(-8px, 12px) scale(1.05) rotate(-1deg); filter: contrast(180%) hue-rotate(15deg); }
+  20% { transform: translate(10px, -8px) scale(1.1) rotate(1deg); filter: contrast(220%) brightness(130%); }
+  30% { transform: translate(-12px, -6px) scale(1.15) rotate(-1.5deg); }
+  40% { transform: translate(8px, 10px) scale(1.22) rotate(1.5deg); }
+  50% { transform: translate(-10px, 8px) scale(1.3) rotate(-1deg); filter: contrast(260%) brightness(150%); }
+  60% { transform: translate(12px, -10px) scale(1.4) rotate(2deg); }
+  70% { transform: translate(-14px, 6px) scale(1.5) rotate(-2deg); }
+  80% { transform: translate(8px, -8px) scale(1.6) rotate(1deg); }
+  90% { transform: translate(-6px, 4px) scale(1.7) rotate(-0.5deg); }
+  100% { transform: translate(0, 0) scale(1.8); }
+}
+
+.animate-demon-shake {
+  animation: demonShake 0.4s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+}
+
+@keyframes flamePulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.animate-flame-pulse {
+  animation: flamePulse 2s ease-in-out infinite;
+}
